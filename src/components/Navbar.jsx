@@ -11,7 +11,16 @@ const Navbar = () => {
         Home
         </a>
         </Link>
-      <Link to="/kittens">Kittens</Link>
+      <Link to="/kittens">
+        <a href='/kittens' className='mr-8'>
+        Kittens
+        </a>
+        </Link>
+      <Link to="/products">
+        <a className='mr-8' href='/products'>
+        Products
+        </a>
+        </Link>
       <div className='flex justify-end md:hidden'>
       <button onClick={openSidebar} className="sidebar-toggle">
         <FaBars />

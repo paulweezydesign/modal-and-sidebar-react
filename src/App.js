@@ -6,8 +6,10 @@ import Modal from './Modal';
 import Sidebar from './Sidebar';
 import Home from './Home';
 import Kittens from './kittens';
+import Products from './Products'
 
-
+import SingleProduct from './SingleProduct';
+import SharedProductLayout from './SharedProductLayout';
 const App = () => {
   return (
     <>
@@ -17,6 +19,10 @@ const App = () => {
        
         <Route path='/' element={<Home />}></Route>
         <Route path='/kittens' element={<Kittens />}></Route>
+        <Route path='products' element={<SharedProductLayout />}>
+            <Route index element={<Products />} />
+            <Route path=':productId' element={<SingleProduct />} />
+          </Route>
       </Routes>
       <Modal />
       <Sidebar />
