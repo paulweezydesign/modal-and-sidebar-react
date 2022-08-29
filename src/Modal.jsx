@@ -7,8 +7,12 @@ import { FaTimes } from 'react-icons/fa';
  
  
 const Modal = () => {
-  const { isModalOpen, closeModal } = useGlobalContext();
+  const { isModalOpen, closeModal,openModal } = useGlobalContext();
   return (
+    <>
+    <button onClick={openModal} className="btn">
+        show modal
+      </button>
     <div
       className={`${
         isModalOpen ? 'modal-overlay show-modal' : 'modal-overlay'
@@ -21,6 +25,7 @@ const Modal = () => {
         </button>
       </div>
     </div>
+    </>
   );
 };
  
