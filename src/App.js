@@ -1,19 +1,27 @@
 import './style.css';
-import { Link, Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar from './components/Navbar';
 import Modal from './Modal';
 import Sidebar from './Sidebar';
 import Home from './Home';
+import Kittens from './kittens';
 
 
-
-export default function App() {
+const App = () => {
   return (
     <>
-      <Home />
+    <Router>
+    <Navbar />
+      <Routes>
+       
+        <Route path='/' element={<Home />}></Route>
+        <Route path='/kittens' element={<Kittens />}></Route>
+      </Routes>
       <Modal />
       <Sidebar />
+      </Router>
     </>
   );
 }
+export default App;

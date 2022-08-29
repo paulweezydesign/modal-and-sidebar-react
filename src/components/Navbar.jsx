@@ -6,7 +6,11 @@ const Navbar = () => {
   const { openSidebar,  } = useGlobalContext();
   return (
     <nav className="text-xl font-bold text-center">
-      <Link to="/home">Home</Link>
+      <Link to="/">
+        <a className='mr-8' href='/'>
+        Home
+        </a>
+        </Link>
       <Link to="/kittens">Kittens</Link>
       <div className='flex justify-end md:hidden'>
       <button onClick={openSidebar} className="sidebar-toggle">

@@ -1,5 +1,4 @@
 import React from 'react';
-import Navbar from 'react-router-dom';
 
 const Kittens = () => {
   return (
