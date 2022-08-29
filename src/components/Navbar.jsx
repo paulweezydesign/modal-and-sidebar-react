@@ -8,7 +8,7 @@ const Navbar = () => {
     <nav className="text-xl font-bold text-center">
       <Link to="/home">Home</Link>
       <Link to="/kittens">Kittens</Link>
-      <div className='flex justify-end'>
+      <div className='flex justify-end md:hidden'>
       <button onClick={openSidebar} className="sidebar-toggle">
         <FaBars />
       </button>
